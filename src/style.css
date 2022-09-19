@@ -1,7 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 .container {
-  background-color: black;
+  background-color: bisque;
   display: flex;
   width: 600px;
   flex-wrap: wrap;
