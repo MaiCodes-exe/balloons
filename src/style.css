@@ -1,1 +1,22 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.container {
+  background-color: black;
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+body {
+  background-color: white;
+}
+
+.balloon {
+  width: 100px;
+  height: 100px;
+  border: 1px dashed red;
+  flex-grow: 1;
+  border-radius: 60%;
+  position: relative;
+}
