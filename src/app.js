@@ -12,7 +12,6 @@ import "./assets/img/4geeks.ico";
 const container = document.querySelector(".container");
 
 const singleBalloon = '<div class="balloon"></div>';
-let content = "";
 let balloons = [
   "white",
   "red",
@@ -33,14 +32,15 @@ let balloons = [
   "mediumvioletred",
   "mediumspringgreen",
   "rosybrown",
-  "royalblue",
+  "royalblue"
 ];
 
-// function popBalloon(pos) {
-//   balloons[pos] = null;
-// }
+function popBalloon(pos) {
+  balloons[pos] = null;
+}
 
 function renderBalloons() {
+  let content = "";
   balloons.forEach(function(color, i) {
     let visible = "";
     if (color === null) {
@@ -49,9 +49,8 @@ function renderBalloons() {
     console.log({ color });
     content =
       content +
-      `<div class="balloon" ${visible} style="background: ${color}"></div>`;
+      `<div class="balloon ${visible}" style="background: ${color}" onClick=popBalloon(${color})></div>`;
     container.innerHTML = content;
   });
 }
 renderBalloons();
-// onClick=popBalloon(${i})
