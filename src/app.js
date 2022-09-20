@@ -22,13 +22,36 @@ let balloons = [
   "blue",
   "purple",
   "grey",
+  "aquamarine",
   "pink",
-  "teal"
+  "teal",
+  "violet",
+  "orange",
+  "brown",
+  "blueviolet",
+  "azure",
+  "mediumvioletred",
+  "mediumspringgreen",
+  "rosybrown",
+  "royalblue",
 ];
 
-balloons.forEach(function(color, i) {
-  console.log({ color });
-  content =
-    content + '<div class="balloon" style="background: ${color}"></div>';
-});
-container.innerHTML = content;
+// function popBalloon(pos) {
+//   balloons[pos] = null;
+// }
+
+function renderBalloons() {
+  balloons.forEach(function(color, i) {
+    let visible = "";
+    if (color === null) {
+      visible = "popped";
+    }
+    console.log({ color });
+    content =
+      content +
+      `<div class="balloon" ${visible} style="background: ${color}"></div>`;
+    container.innerHTML = content;
+  });
+}
+renderBalloons();
+// onClick=popBalloon(${i})

@@ -3,7 +3,7 @@
 .container {
   background-color: bisque;
   display: flex;
-  width: 600px;
+  width: 500px;
   flex-wrap: wrap;
   margin: auto;
 }
@@ -19,4 +19,9 @@
   flex-grow: 1;
   border-radius: 60%;
   position: relative;
+  cursor: pointer;
+}
+
+.balloon.popped {
+  visibility: hidden;
 }
