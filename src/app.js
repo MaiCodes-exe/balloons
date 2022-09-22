@@ -35,9 +35,9 @@ let balloons = [
   "royalblue"
 ];
 
-function popBalloon(pos) {
+window.popBalloon = function(pos) {
   balloons[pos] = null;
-}
+};
 
 function renderBalloons() {
   let content = "";
@@ -49,7 +49,7 @@ function renderBalloons() {
     console.log({ color });
     content =
       content +
-      `<div class="balloon ${visible}" style="background: ${color}" onClick=popBalloon(${color})></div>`;
+      `<div class="balloon ${visible}" style="background: ${color}" onClick=popBalloon(${i})></div>`;
     container.innerHTML = content;
   });
 }
